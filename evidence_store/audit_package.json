@@ -1,0 +1,232 @@
+{
+  "package_id": "AUDIT-PKG-2026-10-26-f60dc926",
+  "organization": "Enterprise FinTech Ltd",
+  "audit_date": "2026-10-26 09:30:55 UTC",
+  "total_checks": 11,
+  "passed_checks": 10,
+  "failed_checks": 1,
+  "warning_checks": 0,
+  "compliance_score_percent": 90.9,
+  "manifest_sha256": "f60dc92676e61746097e9f4516108f92384d662e697afeebacc3d876c3c00616",
+  "evaluations": [
+    {
+      "evaluation_id": "EVAL-POL-HOST-01-98f23317",
+      "check_id": "CIS-HOST-1.1",
+      "rule_id": "POL-HOST-01",
+      "title": "Host Firewall All Profiles Active",
+      "status": "PASS",
+      "actual_value": true,
+      "expected_value": true,
+      "evidence_id": "EV-HOST-CIS-HOST-1_1-98f23317",
+      "evidence_hash": "98f233179b64fe061db55778224a0fb622a7d8447140416b750459deab786dbd",
+      "soc2_mappings": [
+        "CC6.6"
+      ],
+      "iso27001_mappings": [
+        "A.8.20",
+        "A.8.23"
+      ],
+      "finding_details": "Compliance verified: Host Firewall All Profiles Active satisfied. Actual value (True) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-HOST-02-416f6238",
+      "check_id": "CIS-HOST-1.2",
+      "rule_id": "POL-HOST-02",
+      "title": "System Disk Encryption Enforced",
+      "status": "PASS",
+      "actual_value": true,
+      "expected_value": true,
+      "evidence_id": "EV-HOST-CIS-HOST-1_2-416f6238",
+      "evidence_hash": "416f62382a42cbc86f1793fc890e90006e7541a62dfb71a5f7232f6cf034d612",
+      "soc2_mappings": [
+        "CC6.1",
+        "CC6.7"
+      ],
+      "iso27001_mappings": [
+        "A.8.24",
+        "A.8.1"
+      ],
+      "finding_details": "Compliance verified: System Disk Encryption Enforced satisfied. Actual value (True) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-HOST-03-6341f5ff",
+      "check_id": "CIS-HOST-1.3",
+      "rule_id": "POL-HOST-03",
+      "title": "Screen Inactivity Timeout <= 15 Minutes",
+      "status": "PASS",
+      "actual_value": 600,
+      "expected_value": 900,
+      "evidence_id": "EV-HOST-CIS-HOST-1_3-6341f5ff",
+      "evidence_hash": "6341f5ffd660c1486363c86ba90438534688603587f4c9cbda2207a8261644c8",
+      "soc2_mappings": [
+        "CC6.1"
+      ],
+      "iso27001_mappings": [
+        "A.7.7",
+        "A.8.1"
+      ],
+      "finding_details": "Compliance verified: Screen Inactivity Timeout <= 15 Minutes satisfied. Actual value (600) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-HOST-04-dc69b18c",
+      "check_id": "CIS-HOST-1.4",
+      "rule_id": "POL-HOST-04",
+      "title": "EDR Anti-Malware Real-Time Protection Active",
+      "status": "PASS",
+      "actual_value": true,
+      "expected_value": true,
+      "evidence_id": "EV-HOST-CIS-HOST-1_4-dc69b18c",
+      "evidence_hash": "dc69b18cccda16016be84db7623a2d7a1e55b24f04c7cb3f647b313f3a788945",
+      "soc2_mappings": [
+        "CC6.8"
+      ],
+      "iso27001_mappings": [
+        "A.8.7"
+      ],
+      "finding_details": "Compliance verified: EDR Anti-Malware Real-Time Protection Active satisfied. Actual value (True) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-HOST-05-3d4379ab",
+      "check_id": "CIS-HOST-1.5",
+      "rule_id": "POL-HOST-05",
+      "title": "Operating System Supported & Updates Active",
+      "status": "PASS",
+      "actual_value": true,
+      "expected_value": true,
+      "evidence_id": "EV-HOST-CIS-HOST-1_5-3d4379ab",
+      "evidence_hash": "3d4379ab62bc11bb953afae9d2dd9d976cc6613adff54778134728215f4d8201",
+      "soc2_mappings": [
+        "CC7.1"
+      ],
+      "iso27001_mappings": [
+        "A.8.8"
+      ],
+      "finding_details": "Compliance verified: Operating System Supported & Updates Active satisfied. Actual value (True) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-HOST-06-046bbfe6",
+      "check_id": "CIS-HOST-1.6",
+      "rule_id": "POL-HOST-06",
+      "title": "Password Policy Minimum Length >= 12",
+      "status": "PASS",
+      "actual_value": 14,
+      "expected_value": 12,
+      "evidence_id": "EV-HOST-CIS-HOST-1_6-046bbfe6",
+      "evidence_hash": "046bbfe6dee5a81caf220bc1c43fe8f95053813f2361968e4f74a15473907501",
+      "soc2_mappings": [
+        "CC6.1"
+      ],
+      "iso27001_mappings": [
+        "A.5.17",
+        "A.8.5"
+      ],
+      "finding_details": "Compliance verified: Password Policy Minimum Length >= 12 satisfied. Actual value (14) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-AWS-01-77b06f9c",
+      "check_id": "AWS-IAM-01",
+      "rule_id": "POL-AWS-01",
+      "title": "AWS Root Account MFA Enforced",
+      "status": "PASS",
+      "actual_value": true,
+      "expected_value": true,
+      "evidence_id": "EV-CLOUD-AWS_IAM_01-77b06f9c",
+      "evidence_hash": "77b06f9c96f7197190bb92d5a77c612c498bca9b10c99a401ebde5df734eafdd",
+      "soc2_mappings": [
+        "CC6.1",
+        "CC6.2"
+      ],
+      "iso27001_mappings": [
+        "A.8.2",
+        "A.8.5"
+      ],
+      "finding_details": "Compliance verified: AWS Root Account MFA Enforced satisfied. Actual value (True) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-AWS-02-07118b1a",
+      "check_id": "AWS-IAM-02",
+      "rule_id": "POL-AWS-02",
+      "title": "IAM Access Key Age <= 90 Days",
+      "status": "PASS",
+      "actual_value": 0,
+      "expected_value": 0,
+      "evidence_id": "EV-CLOUD-AWS_IAM_02-07118b1a",
+      "evidence_hash": "07118b1a7988565f7fa68fc4b72d8d727fbf537e4d122c0237c29b68487ce30c",
+      "soc2_mappings": [
+        "CC6.2"
+      ],
+      "iso27001_mappings": [
+        "A.8.5"
+      ],
+      "finding_details": "Compliance verified: IAM Access Key Age <= 90 Days satisfied. Actual value (0) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-AWS-03-b078fd1d",
+      "check_id": "AWS-IAM-03",
+      "rule_id": "POL-AWS-03",
+      "title": "Least Privilege Enforcement - No Wildcard Admin Policies",
+      "status": "FAIL",
+      "actual_value": 1,
+      "expected_value": 0,
+      "evidence_id": "EV-CLOUD-AWS_IAM_03-b078fd1d",
+      "evidence_hash": "b078fd1dc891833c36238fc6546fd1ae1b77267aa2ee44221406ae7ea4a33b4e",
+      "soc2_mappings": [
+        "CC6.3"
+      ],
+      "iso27001_mappings": [
+        "A.5.15",
+        "A.8.2"
+      ],
+      "finding_details": "NON-COMPLIANCE DETECTED: Least Privilege Enforcement - No Wildcard Admin Policies failed. Actual value: 1, Expected: equals 0.",
+      "remediation_steps": "Refactor violating IAM policies into scoped, role-based micro-permissions according to least privilege."
+    },
+    {
+      "evaluation_id": "EVAL-POL-AWS-04-92ccf6c7",
+      "check_id": "AWS-S3-01",
+      "rule_id": "POL-AWS-04",
+      "title": "S3 Account-Level Public Access Block",
+      "status": "PASS",
+      "actual_value": true,
+      "expected_value": true,
+      "evidence_id": "EV-CLOUD-AWS_S3_01-92ccf6c7",
+      "evidence_hash": "92ccf6c71caa1e2a1f18bdd8d398aacb5da5be695f7723fffb541db992cc39d3",
+      "soc2_mappings": [
+        "CC6.6"
+      ],
+      "iso27001_mappings": [
+        "A.8.12",
+        "A.8.20"
+      ],
+      "finding_details": "Compliance verified: S3 Account-Level Public Access Block satisfied. Actual value (True) meets requirement.",
+      "remediation_steps": null
+    },
+    {
+      "evaluation_id": "EVAL-POL-AWS-05-774789ad",
+      "check_id": "AWS-TRAIL-01",
+      "rule_id": "POL-AWS-05",
+      "title": "CloudTrail Multi-Region Log Validation Active",
+      "status": "PASS",
+      "actual_value": true,
+      "expected_value": true,
+      "evidence_id": "EV-CLOUD-AWS_TRAIL_01-774789ad",
+      "evidence_hash": "774789ad60ce6ec9f25b819ad70901fe4138b2fe1165ada14739fd2847256314",
+      "soc2_mappings": [
+        "CC7.2"
+      ],
+      "iso27001_mappings": [
+        "A.8.15",
+        "A.8.16"
+      ],
+      "finding_details": "Compliance verified: CloudTrail Multi-Region Log Validation Active satisfied. Actual value (True) meets requirement.",
+      "remediation_steps": null
+    }
+  ]
+}

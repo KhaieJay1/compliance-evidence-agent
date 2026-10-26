@@ -1,0 +1,209 @@
+{
+  "manifest_id": "MNF-2026-10-26-f60dc926",
+  "generated_at": "2026-10-26T09:30:55.000607+00:00",
+  "agent_version": "1.0.0",
+  "evidence_count": 11,
+  "items": [
+    {
+      "evidence_id": "EV-HOST-CIS-HOST-1_1-98f23317",
+      "check_id": "CIS-HOST-1.1",
+      "title": "Host Firewall Status & Active Profiles",
+      "source_type": "HOST_SYSTEM",
+      "collected_at": "2026-10-26T09:30:53.830450+00:00",
+      "resource_id": "workstation-prod-01",
+      "raw_data": {
+        "firewall_service_running": true,
+        "domain_profile_enabled": true,
+        "private_profile_enabled": true,
+        "public_profile_enabled": true,
+        "inbound_default_action": "Block",
+        "outbound_default_action": "Allow"
+      },
+      "sha256_hash": "98f233179b64fe061db55778224a0fb622a7d8447140416b750459deab786dbd"
+    },
+    {
+      "evidence_id": "EV-HOST-CIS-HOST-1_2-416f6238",
+      "check_id": "CIS-HOST-1.2",
+      "title": "Full Disk Encryption Status (BitLocker/LUKS)",
+      "source_type": "HOST_SYSTEM",
+      "collected_at": "2026-10-26T09:30:53.830450+00:00",
+      "resource_id": "workstation-prod-01",
+      "raw_data": {
+        "system_drive": "C:",
+        "encryption_method": "XTS-AES-256",
+        "protection_status": "PROTECTED",
+        "encryption_percentage": 100.0,
+        "lock_status": "UNLOCKED",
+        "bitlocker_enabled": true
+      },
+      "sha256_hash": "416f62382a42cbc86f1793fc890e90006e7541a62dfb71a5f7232f6cf034d612"
+    },
+    {
+      "evidence_id": "EV-HOST-CIS-HOST-1_3-6341f5ff",
+      "check_id": "CIS-HOST-1.3",
+      "title": "Unattended Session Screen Lock & Inactivity Timeout",
+      "source_type": "HOST_SYSTEM",
+      "collected_at": "2026-10-26T09:30:53.830450+00:00",
+      "resource_id": "workstation-prod-01",
+      "raw_data": {
+        "screen_saver_active": true,
+        "screen_saver_is_secure": true,
+        "inactivity_timeout_seconds": 600,
+        "lock_on_sleep": true
+      },
+      "sha256_hash": "6341f5ffd660c1486363c86ba90438534688603587f4c9cbda2207a8261644c8"
+    },
+    {
+      "evidence_id": "EV-HOST-CIS-HOST-1_4-dc69b18c",
+      "check_id": "CIS-HOST-1.4",
+      "title": "Antivirus & EDR Real-Time Protection Status",
+      "source_type": "HOST_SYSTEM",
+      "collected_at": "2026-10-26T09:30:53.830450+00:00",
+      "resource_id": "workstation-prod-01",
+      "raw_data": {
+        "antivirus_product": "Windows Defender Antivirus",
+        "realtime_protection_enabled": true,
+        "behavior_monitor_enabled": true,
+        "antivirus_signatures_up_to_date": true,
+        "tamper_protection_enabled": true
+      },
+      "sha256_hash": "dc69b18cccda16016be84db7623a2d7a1e55b24f04c7cb3f647b313f3a788945"
+    },
+    {
+      "evidence_id": "EV-HOST-CIS-HOST-1_5-3d4379ab",
+      "check_id": "CIS-HOST-1.5",
+      "title": "Operating System Build & Security Patch Currency",
+      "source_type": "HOST_SYSTEM",
+      "collected_at": "2026-10-26T09:30:53.830450+00:00",
+      "resource_id": "workstation-prod-01",
+      "raw_data": {
+        "os_name": "Windows",
+        "os_release": "11",
+        "os_version": "10.0.26300",
+        "architecture": "AMD64",
+        "automatic_updates_enabled": true,
+        "supported_os_build": true
+      },
+      "sha256_hash": "3d4379ab62bc11bb953afae9d2dd9d976cc6613adff54778134728215f4d8201"
+    },
+    {
+      "evidence_id": "EV-HOST-CIS-HOST-1_6-046bbfe6",
+      "check_id": "CIS-HOST-1.6",
+      "title": "Local Account Password Policy & History Enforcement",
+      "source_type": "HOST_SYSTEM",
+      "collected_at": "2026-10-26T09:30:53.830450+00:00",
+      "resource_id": "workstation-prod-01",
+      "raw_data": {
+        "minimum_password_length": 14,
+        "password_complexity_required": true,
+        "password_history_count": 24,
+        "maximum_password_age_days": 90,
+        "account_lockout_threshold": 5,
+        "lockout_duration_minutes": 30
+      },
+      "sha256_hash": "046bbfe6dee5a81caf220bc1c43fe8f95053813f2361968e4f74a15473907501"
+    },
+    {
+      "evidence_id": "EV-CLOUD-AWS_IAM_01-77b06f9c",
+      "check_id": "AWS-IAM-01",
+      "title": "AWS Root Account MFA Enforcement",
+      "source_type": "AWS_IAM",
+      "collected_at": "2026-10-26T09:30:55.000507+00:00",
+      "resource_id": "arn:aws:iam::123456789012:root",
+      "raw_data": {
+        "account_id": "123456789012",
+        "root_account_present": true,
+        "root_mfa_active": true,
+        "mfa_device_type": "HARDWARE_TOTP",
+        "root_access_keys_count": 0,
+        "days_since_last_root_login": 142
+      },
+      "sha256_hash": "77b06f9c96f7197190bb92d5a77c612c498bca9b10c99a401ebde5df734eafdd"
+    },
+    {
+      "evidence_id": "EV-CLOUD-AWS_IAM_02-07118b1a",
+      "check_id": "AWS-IAM-02",
+      "title": "AWS IAM Inactive & Stale Access Key Audit (< 90 Days)",
+      "source_type": "AWS_IAM",
+      "collected_at": "2026-10-26T09:30:55.000507+00:00",
+      "resource_id": "arn:aws:iam::123456789012:user/*",
+      "raw_data": {
+        "total_active_keys": 4,
+        "keys_older_than_90_days": 0,
+        "max_key_age_days": 42,
+        "keys_rotated_within_policy": true,
+        "audited_users": [
+          "ci-deployer",
+          "analytics-sync",
+          "infra-terraform",
+          "backup-operator"
+        ]
+      },
+      "sha256_hash": "07118b1a7988565f7fa68fc4b72d8d727fbf537e4d122c0237c29b68487ce30c"
+    },
+    {
+      "evidence_id": "EV-CLOUD-AWS_IAM_03-b078fd1d",
+      "check_id": "AWS-IAM-03",
+      "title": "AWS Least Privilege IAM Policy Analysis (Wildcard Admin Check)",
+      "source_type": "AWS_IAM",
+      "collected_at": "2026-10-26T09:30:55.000507+00:00",
+      "resource_id": "arn:aws:iam::123456789012:policy/*",
+      "raw_data": {
+        "total_customer_managed_policies": 12,
+        "policies_with_full_admin_wildcard": 1,
+        "violating_policy_names": [
+          "LegacyQuickAdminRolePolicy"
+        ],
+        "violating_statements": [
+          {
+            "Sid": "AllowFullAdminAccess",
+            "Effect": "Allow",
+            "Action": "*",
+            "Resource": "*"
+          }
+        ],
+        "least_privilege_enforced": false
+      },
+      "sha256_hash": "b078fd1dc891833c36238fc6546fd1ae1b77267aa2ee44221406ae7ea4a33b4e"
+    },
+    {
+      "evidence_id": "EV-CLOUD-AWS_S3_01-92ccf6c7",
+      "check_id": "AWS-S3-01",
+      "title": "AWS S3 Account-Level Block Public Access Configuration",
+      "source_type": "AWS_S3",
+      "collected_at": "2026-10-26T09:30:55.000507+00:00",
+      "resource_id": "arn:aws:s3:::123456789012-public-block",
+      "raw_data": {
+        "account_level_s3_block": {
+          "BlockPublicAcls": true,
+          "IgnorePublicAcls": true,
+          "BlockPublicPolicy": true,
+          "RestrictPublicBuckets": true
+        },
+        "all_blocks_enabled": true,
+        "buckets_evaluated": 18,
+        "public_buckets_detected": 0
+      },
+      "sha256_hash": "92ccf6c71caa1e2a1f18bdd8d398aacb5da5be695f7723fffb541db992cc39d3"
+    },
+    {
+      "evidence_id": "EV-CLOUD-AWS_TRAIL_01-774789ad",
+      "check_id": "AWS-TRAIL-01",
+      "title": "AWS CloudTrail Multi-Region Logging & Log File Validation",
+      "source_type": "AWS_CLOUDTRAIL",
+      "collected_at": "2026-10-26T09:30:55.000507+00:00",
+      "resource_id": "arn:aws:cloudtrail:eu-west-1:123456789012:trail/main-audit-trail",
+      "raw_data": {
+        "trail_name": "main-audit-trail",
+        "is_multi_region_trail": true,
+        "log_file_validation_enabled": true,
+        "is_logging": true,
+        "kms_key_encryption_enabled": true,
+        "include_global_service_events": true,
+        "sns_topic_configured": true
+      },
+      "sha256_hash": "774789ad60ce6ec9f25b819ad70901fe4138b2fe1165ada14739fd2847256314"
+    }
+  ],
+  "manifest_sha256": "f60dc92676e61746097e9f4516108f92384d662e697afeebacc3d876c3c00616"
+}
